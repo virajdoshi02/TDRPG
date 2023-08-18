@@ -11,30 +11,46 @@ This game is a captivating 2D Action RPG developed using the Godot game engine, 
 
 **My Team:**
 
-Made with a friend
+I created this game with some help from Nicholas Cirillo, another developer.
 
 <br>
 
 **My Roles in the process:**
 
-*Design
+* Design
 
-  *Game design
+  * Game design
   
-  *Level design
+  * Level design
   
-  *Enemy creation
+  * Enemy creation
   
-  *Writing
+  * Writing
 
-*Development
+* Development
 
-  *Lead developer
+  * Lead developer
   
-  *Game systems engineer
+  * Game systems engineer
   
-  *Created most Scenes (Godot's prefabs) in the game
+  * Created most Nodes (Godot's prefabs) in the game
 
 <br>
 
 **Challenges:**
+
+* New to Godot
+
+  * This was my first time creating a game in Godot and writing in GDScript, so there was quite a bit of learning I had to do
+
+* Spell creation
+
+* Balancing combat
+
+<br>
+
+**Assets:**
+
+*None of the team members are artists, so we decided to use an existing [asset pack](https://pixel-boy.itch.io/ninja-adventure-asset-pack) for the sprites and tilesets (licensed under the CC0 license)
+
+*The particle effects were all created by me 
