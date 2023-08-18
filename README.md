@@ -17,7 +17,7 @@ I created this game with some help from Nicholas Cirillo, another developer.
 
 **My Roles in the process:**
 
-* Design
+* Design:
 
   * Game design
   
@@ -27,30 +27,34 @@ I created this game with some help from Nicholas Cirillo, another developer.
   
   * Writing
 
-* Development
+* Development:
 
-  * Lead developer
+	* Lead developer
   
-  * Game systems engineer
+	* Game systems engineer
   
-  * Created most Nodes (Godot's prefabs) in the game
+	* Created most Nodes (Godot's prefabs) in the game
 
 <br>
 
 **Challenges:**
 
-* New to Godot
+* Spellcasting system:
 
-  * This was my first time creating a game in Godot and writing in GDScript, so there was quite a bit of learning I had to do
+	* This was my first time using Godot, so getting used to the Particle and Physics systems took some time to get used to
+ 
+	* Additionally, I was having trouble with spell collision, instance placement and inaccurate wand locations that took a lot of iteration, playtesting and debugging to fix
 
-* Spell creation
+* Balancing combat difficulty:
 
-* Balancing combat
+	* Since ranged combat dominates the game, I had some difficulty making the simple enemies feel dangerous to the player. Thus, I added an enemy that fires spells, and another one that relentlessly charges at the player at high speed. I also made the setting of the game a dungeon with narrow corners and multiple surprise attacks, in order to increase the sense of danger 
+
+ 	* After that, the game actually became too difficult, so I had to move some enemies aside and reduce aggro range so that the Player isn't surrounded so easily, allowing for a more gradual increase in difficulty for the first Level
 
 <br>
 
 **Assets:**
 
-*None of the team members are artists, so we decided to use an existing [asset pack](https://pixel-boy.itch.io/ninja-adventure-asset-pack) for the sprites and tilesets (licensed under the CC0 license)
+* None of the team members are artists, so we decided to use an existing [asset pack](https://pixel-boy.itch.io/ninja-adventure-asset-pack) for the sprites and tilesets (licensed under the CC0 license)
 
-*The particle effects were all created by me 
+* The particle effects were all created by me 
