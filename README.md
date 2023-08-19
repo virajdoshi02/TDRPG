@@ -31,7 +31,7 @@ I created this game with some help from Nicholas Cirillo, another developer.
 
 	* Lead developer
   
-	* Game systems engineer
+	* Game systems designer
   
 	* Created most Nodes (Godot's prefabs) in the game
 
