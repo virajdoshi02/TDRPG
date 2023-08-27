@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://d26qxy8qjm6fq"]
+
+[ext_resource type="Script" path="res://Scenes/GUI/Inventory/inventory_item.gd" id="1_yn4t5"]
+[ext_resource type="Texture2D" uid="uid://b5mrb3q2rx8no" path="res://Viraj Stuff/Resources/NinjaAdventure/Items/Potion/LifePot.png" id="2_fdqx2"]
+
+[resource]
+script = ExtResource("1_yn4t5")
+name = "LifePot"
+sprite = ExtResource("2_fdqx2")

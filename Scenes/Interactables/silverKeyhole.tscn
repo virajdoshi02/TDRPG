@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://t8h45metbsx"]
+
+[ext_resource type="Script" path="res://Scenes/Interactables/silverKeyhole.gd" id="1_danqs"]
+[ext_resource type="Texture2D" uid="uid://dsykcq1g6ar1j" path="res://Viraj Stuff/Resources/NinjaAdventure/Backgrounds/Tilesets/TilesetDungeon.png" id="2_3e8qk"]
+[ext_resource type="Resource" uid="uid://dclm3gwn2uhfq" path="res://Scenes/GUI/Inventory/Items/silverKey.tres" id="2_q778d"]
+[ext_resource type="Texture2D" uid="uid://dx45ilemf8t5c" path="res://Viraj Stuff/Resources/Procedural Generation/ModularWeapons/ModularWeapon/src/Projectile/Basic/white_circle.svg" id="3_5bwuk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tixfc"]
+size = Vector2(15.9999, 16.0001)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vo7ou"]
+size = Vector2(16, 16)
+
+[node name="SilverKeyhole" type="RigidBody2D"]
+z_index = 1
+y_sort_enabled = true
+collision_layer = 3
+collision_mask = 3
+gravity_scale = 0.0
+sleeping = true
+lock_rotation = true
+freeze = true
+script = ExtResource("1_danqs")
+key = ExtResource("2_q778d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.78814e-07, 4.36467e-08)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_tixfc")
+
+[node name="Area2D" type="Area2D" parent="."]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_3e8qk")
+hframes = 12
+vframes = 4
+frame = 1
+
+[node name="Light" type="PointLight2D" parent="Area2D/Sprite2D"]
+position = Vector2(0, -2.5)
+scale = Vector2(0.375, 0.34375)
+color = Color(1, 0, 0, 1)
+texture = ExtResource("3_5bwuk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_vo7ou")

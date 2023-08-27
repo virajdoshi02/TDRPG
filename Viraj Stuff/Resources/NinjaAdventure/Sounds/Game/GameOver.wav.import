@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cul78ir1v0ndb"
+path="res://.godot/imported/GameOver.wav-3d2fba53feb4e6e42c314e5e8a7da80e.sample"
+
+[deps]
+
+source_file="res://Viraj Stuff/Resources/NinjaAdventure/Sounds/Game/GameOver.wav"
+dest_files=["res://.godot/imported/GameOver.wav-3d2fba53feb4e6e42c314e5e8a7da80e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

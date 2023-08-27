@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://btfd8fkqsgkqy"]
+
+[ext_resource type="Script" path="res://Viraj Stuff/ParticleEffects/FireEffect.gd" id="1_ojjpw"]
+[ext_resource type="Texture2D" uid="uid://c88ghrfjkex1o" path="res://Viraj Stuff/ParticleEffects/white square.png" id="1_wggi0"]
+[ext_resource type="Script" path="res://Viraj Stuff/ParticleEffects/SpellCollisionDestroy.gd" id="3_3t7ed"]
+
+[sub_resource type="Gradient" id="Gradient_g0u1m"]
+offsets = PackedFloat32Array(0, 0.0524297, 0.560102, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.521569, 0, 1, 1, 0.397031, 0.284796, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_20ss1"]
+gradient = SubResource("Gradient_g0u1m")
+
+[sub_resource type="Curve" id="Curve_rt4wg"]
+_data = [Vector2(0, 0.504568), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_k1s6g"]
+curve = SubResource("Curve_rt4wg")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d3lyl"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 200.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+angle_min = -720.0
+angle_max = 720.0
+scale_min = 0.5
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_k1s6g")
+color_ramp = SubResource("GradientTexture1D_20ss1")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_delus"]
+radius = 26.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8wiva"]
+radius = 24.0
+
+[node name="FireEffect" type="Node2D"]
+z_index = 1
+scale = Vector2(0.125, 0.125)
+script = ExtResource("1_ojjpw")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 300
+process_material = SubResource("ParticleProcessMaterial_d3lyl")
+texture = ExtResource("1_wggi0")
+lifetime = 0.1
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CircleShape2D_delus")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+z_index = 1
+z_as_relative = false
+collision_mask = 3
+sync_to_physics = false
+script = ExtResource("3_3t7ed")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+shape = SubResource("CircleShape2D_8wiva")
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

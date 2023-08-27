@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dv0q1t5lr556r"
+path="res://.godot/imported/Hit5.wav-4ba0b9f817eb765f2f73f07899e3e327.sample"
+
+[deps]
+
+source_file="res://Viraj Stuff/Resources/NinjaAdventure/Sounds/Game/Hit5.wav"
+dest_files=["res://.godot/imported/Hit5.wav-4ba0b9f817eb765f2f73f07899e3e327.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4etkxestlmub"]
+
+[ext_resource type="PackedScene" path="res://Scenes/Collectibles/collectible.tscn" id="1_peo4s"]
+[ext_resource type="Script" path="res://Scenes/Collectibles/silverKeyPickup.gd" id="2_miblm"]
+[ext_resource type="Texture2D" uid="uid://78ae5sjueoh7" path="res://Viraj Stuff/Resources/NinjaAdventure/Items/Treasure/SilverKey.png" id="3_crbdm"]
+[ext_resource type="Resource" uid="uid://dclm3gwn2uhfq" path="res://Scenes/GUI/Inventory/Items/silverKey.tres" id="3_o5laj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjigr"]
+resource_local_to_scene = true
+size = Vector2(16, 16)
+
+[node name="SilverKeyPickup" instance=ExtResource("1_peo4s")]
+script = ExtResource("2_miblm")
+key = ExtResource("3_o5laj")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_kjigr")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_crbdm")

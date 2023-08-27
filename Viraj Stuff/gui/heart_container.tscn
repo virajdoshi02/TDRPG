@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://gohjgjnipb3f"]
+
+[ext_resource type="Script" path="res://Viraj Stuff/gui/heart_container.gd" id="1_0fp8p"]
+
+[node name="HeartContainer" type="HBoxContainer"]
+theme_override_constants/separation = 1
+script = ExtResource("1_0fp8p")

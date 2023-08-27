@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dtgq6q2gs3pgv"
+path="res://.godot/imported/10 - Dark Castle.ogg-497068eca811ff17c3d9bfe2bb7acd94.oggvorbisstr"
+
+[deps]
+
+source_file="res://Viraj Stuff/Resources/NinjaAdventure/Musics/10 - Dark Castle.ogg"
+dest_files=["res://.godot/imported/10 - Dark Castle.ogg-497068eca811ff17c3d9bfe2bb7acd94.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

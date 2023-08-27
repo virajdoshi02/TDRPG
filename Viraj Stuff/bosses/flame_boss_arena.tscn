@@ -1,0 +1,162 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5cx7t2ygyuol"]
+
+[ext_resource type="PackedScene" uid="uid://bs60cpduu10bw" path="res://Viraj Stuff/bosses/flame_boss.tscn" id="1_bo5h8"]
+[ext_resource type="Script" path="res://Viraj Stuff/bosses/arena_script.gd" id="1_vdmgi"]
+[ext_resource type="Texture2D" uid="uid://ba87getjkbca5" path="res://Viraj Stuff/art/TilesetDungeon.png" id="3_askfo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7f5l8"]
+size = Vector2(128, 240)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xshfj"]
+texture = ExtResource("3_askfo")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+5:1/0 = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0 = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
+5:2/0 = 0
+5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:2/0/physics_layer_0/angular_velocity = 0.0
+6:2/0 = 0
+6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:2/0/physics_layer_0/angular_velocity = 0.0
+7:2/0 = 0
+7:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:2/0/physics_layer_0/angular_velocity = 0.0
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+4:3/0 = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
+5:3/0 = 0
+5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:3/0/physics_layer_0/angular_velocity = 0.0
+6:3/0 = 0
+6:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:3/0/physics_layer_0/angular_velocity = 0.0
+7:3/0 = 0
+7:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:3/0/physics_layer_0/angular_velocity = 0.0
+8:3/0 = 0
+8:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:3/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_figtq"]
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
+sources/0 = SubResource("TileSetAtlasSource_xshfj")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pyrry"]
+
+[node name="FlameBossArena" type="Node2D"]
+
+[node name="GroundArea" type="Area2D" parent="." node_paths=PackedStringArray("tileMap")]
+script = ExtResource("1_vdmgi")
+tileMap = NodePath("TileMap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundArea"]
+shape = SubResource("RectangleShape2D_7f5l8")
+
+[node name="FlameBoss" parent="GroundArea" node_paths=PackedStringArray("arena") instance=ExtResource("1_bo5h8")]
+marker_paths = Array[NodePath]([NodePath("../Marker2D"), NodePath("../Marker2D13"), NodePath("../Marker2D12"), NodePath("../Marker2D11"), NodePath("../Marker2D10"), NodePath("../Marker2D9"), NodePath("../Marker2D8"), NodePath("../Marker2D7"), NodePath("../Marker2D6"), NodePath("../Marker2D5"), NodePath("../Marker2D4"), NodePath("../Marker2D3"), NodePath("../Marker2D2")])
+arena = NodePath("..")
+
+[node name="TileMap" type="TileMap" parent="GroundArea"]
+position = Vector2(0, 8)
+tile_set = SubResource("TileSet_figtq")
+format = 2
+layer_0/z_index = 2
+layer_0/tile_data = PackedInt32Array(-196613, 0, 3, -131077, 0, 3, -65541, 0, 3, -5, 0, 3, 65531, 0, 3, 131067, 0, 3, 196603, 0, 3, -196604, 0, 3, -262140, 0, 3, -131068, 0, 3, -65532, 0, 3, 4, 0, 3, 65540, 0, 3, 131076, 0, 3)
+
+[node name="Marker2D" type="Marker2D" parent="GroundArea"]
+position = Vector2(27, 47)
+
+[node name="Marker2D13" type="Marker2D" parent="GroundArea"]
+position = Vector2(1, -96)
+
+[node name="Marker2D12" type="Marker2D" parent="GroundArea"]
+position = Vector2(2, 90)
+
+[node name="Marker2D11" type="Marker2D" parent="GroundArea"]
+position = Vector2(6, -69)
+
+[node name="Marker2D10" type="Marker2D" parent="GroundArea"]
+position = Vector2(-36, -2)
+
+[node name="Marker2D9" type="Marker2D" parent="GroundArea"]
+position = Vector2(45, 7)
+
+[node name="Marker2D8" type="Marker2D" parent="GroundArea"]
+position = Vector2(39, -93)
+
+[node name="Marker2D7" type="Marker2D" parent="GroundArea"]
+position = Vector2(-28, -46)
+
+[node name="Marker2D6" type="Marker2D" parent="GroundArea"]
+position = Vector2(-22, 33)
+
+[node name="Marker2D5" type="Marker2D" parent="GroundArea"]
+position = Vector2(-36, -86)
+
+[node name="Marker2D4" type="Marker2D" parent="GroundArea"]
+position = Vector2(37, -37)
+
+[node name="Marker2D3" type="Marker2D" parent="GroundArea"]
+position = Vector2(-36, 85)
+
+[node name="Marker2D2" type="Marker2D" parent="GroundArea"]
+position = Vector2(34, 91)
+
+[node name="Entrance" type="Area2D" parent="GroundArea"]
+position = Vector2(-48, 0)
+scale = Vector2(0.560001, 11.44)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundArea/Entrance"]
+shape = SubResource("RectangleShape2D_pyrry")
+
+[connection signal="area_entered" from="GroundArea/Entrance" to="GroundArea" method="_on_entrance_area_entered"]

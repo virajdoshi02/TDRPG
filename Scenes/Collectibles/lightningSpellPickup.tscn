@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk3u5smjltoos"]
+
+[ext_resource type="PackedScene" path="res://Scenes/Collectibles/collectible.tscn" id="1_4bkgp"]
+[ext_resource type="Script" path="res://Scenes/Collectibles/lightningSpellPickup.gd" id="2_lliv2"]
+[ext_resource type="Texture2D" uid="uid://kmui8qvwqacg" path="res://Viraj Stuff/Resources/NinjaAdventure/Items/Scroll/ScrollThunder.png" id="3_hfybp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjigr"]
+resource_local_to_scene = true
+size = Vector2(16, 16)
+
+[node name="LightningSpellPickup" instance=ExtResource("1_4bkgp")]
+script = ExtResource("2_lliv2")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_kjigr")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_hfybp")

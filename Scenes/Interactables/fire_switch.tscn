@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://1wk8o886pl1d"]
+
+[ext_resource type="Texture2D" uid="uid://dsykcq1g6ar1j" path="res://Viraj Stuff/Resources/NinjaAdventure/Backgrounds/Tilesets/TilesetDungeon.png" id="1_1ytqs"]
+[ext_resource type="Script" path="res://Scenes/Interactables/fire_switch.gd" id="1_wcii4"]
+[ext_resource type="Texture2D" uid="uid://dx45ilemf8t5c" path="res://Viraj Stuff/Resources/Procedural Generation/ModularWeapons/ModularWeapon/src/Projectile/Basic/white_circle.svg" id="2_rnh8w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wktvy"]
+radius = 6.0
+height = 16.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vo7ou"]
+size = Vector2(16, 16)
+
+[node name="FireSwitch" type="RigidBody2D"]
+z_index = 1
+y_sort_enabled = true
+collision_layer = 3
+collision_mask = 3
+gravity_scale = 0.0
+sleeping = true
+lock_rotation = true
+freeze = true
+script = ExtResource("1_wcii4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_wktvy")
+
+[node name="Area2D" type="Area2D" parent="."]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("1_1ytqs")
+hframes = 12
+vframes = 4
+frame = 30
+
+[node name="Light" type="PointLight2D" parent="Area2D/Sprite2D"]
+visible = false
+position = Vector2(0, -2.5)
+scale = Vector2(0.375, 0.34375)
+color = Color(1, 0, 0, 1)
+texture = ExtResource("2_rnh8w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("RectangleShape2D_vo7ou")

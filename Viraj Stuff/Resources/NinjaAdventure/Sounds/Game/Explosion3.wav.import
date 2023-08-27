@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b6rl6u84gh67g"
+path="res://.godot/imported/Explosion3.wav-12dfa40d7c3a480d51fa0d26e70e91e9.sample"
+
+[deps]
+
+source_file="res://Viraj Stuff/Resources/NinjaAdventure/Sounds/Game/Explosion3.wav"
+dest_files=["res://.godot/imported/Explosion3.wav-12dfa40d7c3a480d51fa0d26e70e91e9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

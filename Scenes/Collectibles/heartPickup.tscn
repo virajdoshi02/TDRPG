@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cydadbdssr3jk"]
+
+[ext_resource type="PackedScene" uid="uid://cxb4u1flkft" path="res://Scenes/Collectibles/collectible.tscn" id="1_g7req"]
+[ext_resource type="Texture2D" uid="uid://b5mrb3q2rx8no" path="res://Viraj Stuff/Resources/NinjaAdventure/Items/Potion/LifePot.png" id="2_bda4b"]
+[ext_resource type="Script" path="res://Scenes/Collectibles/heartPickup.gd" id="2_ve8oy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf4pv"]
+resource_local_to_scene = true
+size = Vector2(9, 11)
+
+[node name="HeartPickup" instance=ExtResource("1_g7req")]
+script = ExtResource("2_ve8oy")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_cf4pv")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_bda4b")

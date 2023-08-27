@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://bcitctjgl1g6j"]
+
+[ext_resource type="Texture2D" uid="uid://c4wnh7vk3bq3m" path="res://Viraj Stuff/Resources/kenney-particle-pack-master/addons/kenney_particle_pack/spark_05.png" id="1_hhcim"]
+[ext_resource type="Script" path="res://Viraj Stuff/ParticleEffects/LightningEffect.gd" id="1_im4nt"]
+[ext_resource type="Script" path="res://Viraj Stuff/ParticleEffects/SpellCollisionDestroy.gd" id="2_t2aj4"]
+
+[sub_resource type="Gradient" id="Gradient_yrp7x"]
+offsets = PackedFloat32Array(0, 0.574101)
+colors = PackedColorArray(1, 1, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_gnknt"]
+gradient = SubResource("Gradient_yrp7x")
+
+[sub_resource type="Curve" id="Curve_q85pq"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_jshcj"]
+curve = SubResource("Curve_q85pq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sdkqo"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+angle_min = -720.0
+angle_max = 720.0
+scale_min = 0.0
+scale_max = 0.06
+scale_curve = SubResource("CurveTexture_jshcj")
+color_ramp = SubResource("GradientTexture1D_gnknt")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5htfg"]
+radius = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ldrkh"]
+radius = 20.0
+
+[node name="LightningEffect" type="Node2D"]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_im4nt")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_sdkqo")
+texture = ExtResource("1_hhcim")
+lifetime = 0.5
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CircleShape2D_5htfg")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+z_index = 1
+z_as_relative = false
+collision_mask = 3
+sync_to_physics = false
+script = ExtResource("2_t2aj4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+shape = SubResource("CircleShape2D_ldrkh")
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_area_2d_area_entered"]

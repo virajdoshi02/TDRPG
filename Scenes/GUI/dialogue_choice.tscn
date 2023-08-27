@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg0ebxeh53s5p"]
+
+[ext_resource type="Script" path="res://Scenes/GUI/dialogue_choice.gd" id="1_vcl6g"]
+[ext_resource type="Texture2D" uid="uid://bmyc8hgtgb7lu" path="res://Viraj Stuff/Resources/arrow.png" id="2_0y8um"]
+
+[node name="DialogueChoice" type="Button"]
+offset_right = 585.0
+offset_bottom = 80.0
+text = "Click here for the choice"
+script = ExtResource("1_vcl6g")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-33, 16)
+scale = Vector2(0.236111, 0.222456)
+texture = ExtResource("2_0y8um")

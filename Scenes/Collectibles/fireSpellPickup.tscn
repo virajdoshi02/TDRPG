@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm4p1jfkr74h3"]
+
+[ext_resource type="PackedScene" path="res://Scenes/Collectibles/collectible.tscn" id="1_pt2ov"]
+[ext_resource type="Script" path="res://Scenes/Collectibles/fireSpellPickup.gd" id="2_ko1rr"]
+[ext_resource type="Texture2D" uid="uid://bka358lj2ijci" path="res://Viraj Stuff/Resources/NinjaAdventure/Items/Scroll/ScrollFire.png" id="2_vssfo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjigr"]
+resource_local_to_scene = true
+size = Vector2(16, 16)
+
+[node name="FireSpellPickup" instance=ExtResource("1_pt2ov")]
+script = ExtResource("2_ko1rr")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_kjigr")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_vssfo")

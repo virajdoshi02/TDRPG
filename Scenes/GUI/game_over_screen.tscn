@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5or6bf0eqcx4"]
+
+[ext_resource type="Script" path="res://Scenes/GUI/game_over_screen.gd" id="1_28ifu"]
+
+[node name="GameOverScreen" type="Panel"]
+process_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_28ifu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(1, 0, 0, 0.682353)
+
+[node name="GameOverText" type="RichTextLabel" parent="."]
+process_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 160.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 200
+bbcode_enabled = true
+text = "[center]Game Over"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 418.0
+offset_top = 446.0
+offset_right = -418.0
+offset_bottom = -113.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 55
+text = "Restart"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

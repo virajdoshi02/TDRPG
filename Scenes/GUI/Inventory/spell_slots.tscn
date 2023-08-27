@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3l1xswdox5f8"]
+
+[ext_resource type="Script" path="res://Scenes/GUI/Inventory/spell_slots.gd" id="1_lxw4a"]
+[ext_resource type="Texture2D" uid="uid://cib145h17aj61" path="res://Viraj Stuff/Resources/Inventory/InventoryRect.png" id="2_x58xq"]
+[ext_resource type="PackedScene" uid="uid://dcroo40jm0kvi" path="res://Scenes/GUI/Inventory/slot.tscn" id="3_7w18q"]
+
+[node name="SpellSlots" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -3.0
+offset_top = 42.0
+offset_right = 37.0
+offset_bottom = 82.0
+scale = Vector2(2.84, 2.84)
+script = ExtResource("1_lxw4a")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+self_modulate = Color(0.827451, 0.52549, 0.372549, 0.470588)
+layout_mode = 0
+offset_left = -64.0
+offset_top = -31.0
+offset_right = 66.0
+offset_bottom = 1.0
+texture = ExtResource("2_x58xq")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 123.0
+offset_bottom = 26.0
+columns = 5
+
+[node name="Slot" parent="NinePatchRect/GridContainer" instance=ExtResource("3_7w18q")]
+layout_mode = 2
+
+[node name="Slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("3_7w18q")]
+layout_mode = 2
+
+[node name="Slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("3_7w18q")]
+layout_mode = 2
+
+[node name="Slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("3_7w18q")]
+layout_mode = 2
+
+[node name="Slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("3_7w18q")]
+layout_mode = 2

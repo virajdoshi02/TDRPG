@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://3usg2bygsrpe"]
+
+[ext_resource type="Script" path="res://Scripts/Spell Managers/spellcaster.gd" id="1_04ctx"]
+
+[node name="Spellcaster" type="Node"]
+script = ExtResource("1_04ctx")
