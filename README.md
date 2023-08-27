@@ -59,6 +59,8 @@ I created this game with some help from Nicholas Cirillo, another developer.
 
 <img width="1440" alt="Screenshot 2023-08-27 at 9 16 27 AM" src="https://github.com/virajdoshi02/TDRPG/blob/main/Screenshot%202023-08-27%20at%209.22.54%20AM.png"></h1>
 
+<img width="1440" alt="Screenshot 2023-08-27 at 9 16 27 AM" src="https://github.com/virajdoshi02/TDRPG/blob/main/Screenshot%202023-08-27%20at%209.16.27%20AM.png"></h1>
+
 <br>
 
 **Assets:**
