@@ -53,13 +53,13 @@ I created this game with some help from Nicholas Cirillo, another developer.
 
 **Images:**
 
-<h1 align="center"><img width="1552" alt="Screenshot 2023-08-27 at 9 21 32 AM" src="https://github.com/virajdoshi02/TDRPG/assets/47150131/b44d134c-6265-405c-b32e-d23f00375347">
+<h1 align="center"><img width="1552" alt="Screenshot 2023-08-27 at 9 21 32 AM" src="">
 
-<img width="765" alt="Screenshot 2023-08-27 at 9 22 23 AM" src="https://github.com/virajdoshi02/TDRPG/assets/47150131/0369f9c6-3687-4f95-a176-01404b50a82a">
+<img width="765" alt="Screenshot 2023-08-27 at 9 22 23 AM" src="https://github.com/virajdoshi02/TDRPG/blob/main/Screenshot%202023-08-27%20at%209.21.32%20AM.png">
 
-<img width="1440" alt="Screenshot 2023-08-27 at 9 22 54 AM" src="https://github.com/virajdoshi02/TDRPG/assets/47150131/615d6e41-6191-4873-a3de-310b0a4027b7">
+<img width="1440" alt="Screenshot 2023-08-27 at 9 22 54 AM" src="https://github.com/virajdoshi02/TDRPG/blob/main/Screenshot%202023-08-27%20at%209.22.23%20AM.png">
 
-<img width="1440" alt="Screenshot 2023-08-27 at 9 16 27 AM" src="https://github.com/virajdoshi02/TDRPG/assets/47150131/175b4ae0-6b28-4537-9b21-1d5342bbc4ee"></h1>
+<img width="1440" alt="Screenshot 2023-08-27 at 9 16 27 AM" src="https://github.com/virajdoshi02/TDRPG/blob/main/Screenshot%202023-08-27%20at%209.22.54%20AM.png"></h1>
 
 <br>
 
